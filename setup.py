@@ -8,7 +8,7 @@ setuptools.setup(
     version="1.0.0",
     author="thibmaek",
     author_email="thibault.maekelbergh@icloud.com",
-    description="Python library to interact with public APIs of VRT",
+    description="Python library to interact with VRT public APIs",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/thibmaek/pyvrt",
