@@ -13,8 +13,8 @@ def __get_zone_from_list(items_list, zone):
 
 
 def summary(region='BE'):
-    if region != 'BE':
-        raise ValueError('Only region=BE is supported for retrieving summary')
+    if region is not 'BE':
+        raise ValueError("Only region == 'BE' is supported for retrieving summary")
 
     res = vrt_api_request('weather', 'weathertalks/belgie_huidig', params={
         'accept': 'application/vnd.weather.vrt.be.weathertalks_1.0+json'
