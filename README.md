@@ -5,7 +5,8 @@
 ## Usage
 
 ```python
-from pyvrt import traffic, weather
+from pyvrt.traffic import traffic
+from pyvrt.weather import weather
 
 weather.summary()
 weather.forecast(region='BE', zone='kust')
@@ -16,5 +17,6 @@ traffic.trafficJam(km=True)
 ## Development
 
 ```shell
-$ python setup.py install
+$ make install
+$ make build
 ```

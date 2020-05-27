@@ -1,6 +1,4 @@
-import requests
-
-from lib.http import vrt_api_request
+from .http import vrt_api_request
 
 
 def traffic_teaser():

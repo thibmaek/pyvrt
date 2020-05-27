@@ -1,4 +1,4 @@
-from lib.http import vrt_api_request
+from .http import vrt_api_request
 
 
 def __get_zone_from_list(items_list, zone):
