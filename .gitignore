@@ -3,3 +3,8 @@ build
 
 pyvrt.egg-info
 __pycache__
+
+# virtualenv
+bin
+lib
+pyvenv.cfg
