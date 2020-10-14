@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pyvrt",
-    version="1.6.0",
+    version="1.6.2",
     author="thibmaek",
     author_email="thibault.maekelbergh@icloud.com",
     description="Python library to interact with VRT public APIs",

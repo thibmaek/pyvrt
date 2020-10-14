@@ -5,13 +5,13 @@
 ## Usage
 
 ```python
-from pyvrt.traffic import traffic
-from pyvrt.weather import weather
+import pyvrt.traffic as traffic
+import pyvrt.weather as weather
 
 weather.summary()
 weather.forecast(region='BE', zone='kust')
 
-traffic.trafficJam(km=True)
+traffic.traffic_jam(km=True)
 ```
 
 ## Development

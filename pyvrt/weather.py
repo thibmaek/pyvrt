@@ -26,7 +26,7 @@ def summary(region="BE"):
 
 
 def current(region="BE", zone=None):
-    if region is "BE":
+    if region == "BE":
         res = vrt_api_request(
             "weather",
             "observations/belgische_streken",
@@ -40,7 +40,7 @@ def current(region="BE", zone=None):
 
     return res
 
-    if region is "EU":
+    if region == "EU":
         res = vrt_api_request(
             "weather",
             "observations/europese_steden",
@@ -56,7 +56,7 @@ def current(region="BE", zone=None):
 
 
 def forecast(region="BE", zone=None):
-    if region is "BE":
+    if region == "BE":
         res = vrt_api_request(
             "weather",
             "forecasts/belgische_streken",
@@ -71,7 +71,7 @@ def forecast(region="BE", zone=None):
         else:
             return res
 
-    if region is "EU":
+    if region == "EU":
         res = vrt_api_request(
             "weather",
             "forecasts/europese_steden",
