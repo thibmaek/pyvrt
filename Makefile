@@ -4,11 +4,14 @@ lint:
 	black pyvrt/
 
 install:
-	python3 -m venv .
+	python -m venv .
 	source bin/activate
 	python setup.py install
 	pip install -r requirements.txt
 
 build: lint
 	rm -rf build/ dist/
-	python3 setup.py sdist bdist_wheel
+	python setup.py sdist bdist_wheel
+
+publish: build
+	twine upload dist/*

@@ -2,5 +2,5 @@
   "python.linting.pycodestyleEnabled": false,
   "python.linting.flake8Enabled": true,
   "python.linting.enabled": true,
-  "python.pythonPath": "${workspaceFolder}/bin/python",
+  "python.pythonPath": "bin/python",
 }
