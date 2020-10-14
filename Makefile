@@ -1,7 +1,7 @@
 .PHONY: build
 
 lint:
-	black pyvrt/
+	bin/black pyvrt/
 
 install:
 	python -m venv .
@@ -11,7 +11,7 @@ install:
 
 build: lint
 	rm -rf build/ dist/
-	python setup.py sdist bdist_wheel
+	bin/python setup.py sdist bdist_wheel
 
 publish: build
-	twine upload dist/*
+	bin/twine upload dist/*
