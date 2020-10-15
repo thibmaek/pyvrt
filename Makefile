@@ -9,9 +9,9 @@ install:
 	python setup.py install
 	pip install -r requirements.txt
 
-build: lint
+build:
 	rm -rf build/ dist/
 	bin/python setup.py sdist bdist_wheel
 
-publish: build
+publish: lint build
 	bin/twine upload dist/*
