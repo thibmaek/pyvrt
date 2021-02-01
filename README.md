@@ -20,3 +20,16 @@ traffic.traffic_jam(km=True)
 $ make install
 $ make build
 ```
+
+To debug, create an index.py file with some code and run through Python runtime:
+
+```py
+# pyvrt/media/index.py
+from . import stubru
+
+print(stubru.current())
+```
+
+```shell
+$ python -m pyvrt.media.index
+```
