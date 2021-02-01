@@ -1,17 +1,20 @@
 .PHONY: build
 
-lint:
-	bin/black pyvrt/
+lint: venv
+	black pyvrt/
 
-install:
+venv:
 	python -m venv .
 	source bin/activate
+
+install: venv
 	python setup.py install
 	pip install -r requirements.txt
 
-build:
+build: venv
 	rm -rf build/ dist/
-	bin/python setup.py sdist bdist_wheel
+	python setup.py sdist bdist_wheel
 
 publish: lint build
-	bin/twine upload dist/*
+	twine upload dist/*
+
