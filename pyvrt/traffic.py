@@ -1,12 +1,8 @@
-from .http import vrt_api_request
+from .http import vrtnws_api_request
 
 
 def traffic_teaser():
-    res = vrt_api_request(
-        "traffic",
-        "teaser",
-        params={"accept": "application/vnd.traffic.vrt.be.teaser_1.0+json"},
-    )
+    res = vrtnws_api_request("traffic", "teaser")
     return res
 
 

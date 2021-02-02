@@ -5,7 +5,7 @@ lint: venv
 
 venv:
 	python -m venv .
-	source bin/activate
+	. bin/activate
 
 install: venv
 	python setup.py install

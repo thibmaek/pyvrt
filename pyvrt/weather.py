@@ -1,4 +1,4 @@
-from .http import vrt_api_request
+from .http import vrt_services_request
 
 
 def __get_zone_from_list(items_list, zone):
@@ -13,7 +13,7 @@ def summary(region="BE"):
     if region != "BE":
         raise ValueError("Only region=BE is supported for retrieving summary")
 
-    res = vrt_api_request(
+    res = vrt_services_request(
         "weather",
         "weathertalks/belgie_huidig",
         params={"accept": "application/vnd.weather.vrt.be.weathertalks_1.0+json"},
@@ -27,7 +27,7 @@ def summary(region="BE"):
 
 def current(region="BE", zone=None):
     if region == "BE":
-        res = vrt_api_request(
+        res = vrt_services_request(
             "weather",
             "observations/belgische_streken",
             params={"accept": "application/vnd.weather.vrt.be.observations_1.0+json"},
@@ -41,7 +41,7 @@ def current(region="BE", zone=None):
     return res
 
     if region == "EU":
-        res = vrt_api_request(
+        res = vrt_services_request(
             "weather",
             "observations/europese_steden",
             params={"accept": "application/vnd.weather.vrt.be.observations_1.0+json"},
@@ -57,7 +57,7 @@ def current(region="BE", zone=None):
 
 def forecast(region="BE", zone=None):
     if region == "BE":
-        res = vrt_api_request(
+        res = vrt_services_request(
             "weather",
             "forecasts/belgische_streken",
             params={"accept": "application/vnd.weather.vrt.be.forecasts_1.0+json"},
@@ -72,7 +72,7 @@ def forecast(region="BE", zone=None):
             return res
 
     if region == "EU":
-        res = vrt_api_request(
+        res = vrt_services_request(
             "weather",
             "forecasts/europese_steden",
             params={"accept": "application/vnd.weather.vrt.be.forecasts_1.0+json"},

@@ -1,4 +1,4 @@
-from ..http import vrt_api_request
+from ..http import vrt_services_request
 from .const import CHANNEL_CODE_STUBRU
 
 
@@ -11,7 +11,7 @@ def __get_image_url(image_urls):
 
 
 def get_onair():
-    onairs = vrt_api_request(
+    onairs = vrt_services_request(
         "epg",
         "onair",
         params={
